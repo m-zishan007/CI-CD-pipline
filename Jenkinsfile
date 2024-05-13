@@ -7,6 +7,12 @@ pipeline {
            // JAVA_HOME = tool name: 'Java11', type: 'jdk'
         }
     stages{
+         stage('Build') {
+                steps {
+                    // Use the defined Maven and JDK tools
+                    sh "${MVN_HOME}/bin/mvn clean package"
+                }
+            }
         stage('Build Maven'){
             steps{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/m-zishan007/CI-CD-pipline.git']])
