@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
             // Define a tool named 'Maven' with the installation name 'Maven3'
-            MVN_HOME = tool name: 'Maven3', type: 'maven'
+            MVN_HOME = tool name: 'Maven', type: 'maven'
             // Define a tool named 'JDK' with the installation name 'Java11'
             JAVA_HOME = tool name: 'Java17', type: 'jdk'
         }
