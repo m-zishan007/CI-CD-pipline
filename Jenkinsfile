@@ -6,12 +6,16 @@ pipeline {
         }
     stages{
          stage('Build maven') {
-                steps {
+                steps{
                     // Use the defined Maven and JDK tools
                     sh "${MVN_HOME}/bin/mvn clean package"
                     sh "${MVN_HOME}/bin/mvn clean install"
                 }
          }
-
+        stage('Build docker image'){
+                steps{
+                    sh "docker build -t devops-integration ."
+                }
+        }
     }
 }
