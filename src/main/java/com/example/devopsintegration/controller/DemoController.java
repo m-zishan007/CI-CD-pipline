@@ -23,5 +23,11 @@ public class DemoController {
         return "How are you doing today Motoooo!";
     }
 
+@GetMapping("/hello-pipe")
+    public String helloMoto(){
+        return "How are you doing today pipe!";
+    }
+
+
 
 }
