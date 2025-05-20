@@ -18,8 +18,4 @@ public class DemoController {
         return "Testing devops integration";
     }
 
-    @GetMapping("/demo1")
-    public String test1(){
-        return "zishan";
-    }
 }
