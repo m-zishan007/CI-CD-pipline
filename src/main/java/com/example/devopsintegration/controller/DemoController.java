@@ -18,4 +18,10 @@ public class DemoController {
         return "Testing devops integration";
     }
 
+ @GetMapping("/hello-moto")
+    public String helloMoto(){
+        return "How are you doing today Motoooo!";
+    }
+
+
 }
