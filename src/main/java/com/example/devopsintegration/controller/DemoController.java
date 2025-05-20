@@ -12,4 +12,9 @@ public class DemoController {
     public String demo(){
         return "Testing devops integration using jenkins and docker and k8s";
     }
+
+    @GetMapping("/demo")
+    public String test(){
+        return "Testing devops integration";
+    }
 }
