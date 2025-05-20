@@ -24,7 +24,7 @@ public class DemoController {
     }
 
 @GetMapping("/hello-pipe")
-    public String helloMoto(){
+    public String hello(){
         return "How are you doing today pipe!";
     }
 
