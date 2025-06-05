@@ -18,12 +18,12 @@ public class DemoController {
         return "Testing devops integration";
     }
 
- @GetMapping("/hello-moto")
+    @GetMapping("/hello-moto")
     public String helloMoto(){
-        return "How are you doing today Motoooo!";
+        return "How are you doing today Mot!";
     }
 
-@GetMapping("/hello-pipe")
+    @GetMapping("/hello-pipe")
     public String hello(){
         return "How are you doing today pipe!";
     }
