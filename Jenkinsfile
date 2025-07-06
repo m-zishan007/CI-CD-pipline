@@ -17,5 +17,17 @@ pipeline {
                     sh "docker build -t devops-integration ."
                 }
         }
+
+        stage('Deploy to K8s') {
+               steps {
+                     container('kubectl') {
+                     sh '''
+                     sed -i "s|mzishan007/devops-integration:latest|mzishan007/devops-integration:${BUILD_NUMBER}|" deployment.yaml
+                     kubectl apply -f deployment.yaml
+                     kubectl rollout status deployment/my-app --timeout=90s
+                     '''
+                     }
+               }
+        }
     }
 }
