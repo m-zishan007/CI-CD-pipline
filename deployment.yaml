@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: CI-CD-pipline
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: CI-CD-pipline
+  template:
+    metadata:
+      labels:
+        app: CI-CD-pipline
+    spec:
+      containers:
+        - name: CI-CD-pipline
+          image: mzishan007/devops-integration:latest  # Will be replaced
+          ports:
+            - containerPort: 8081
