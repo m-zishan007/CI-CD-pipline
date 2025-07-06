@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ci-cd-pipline
+  name: spring-devops-app
 spec:
-  replicas: 1
+  replicas: 1  # Matches your worker nodes
   selector:
     matchLabels:
-      app: ci-cd-pipline
+      app: spring-devops-app
   template:
     metadata:
       labels:
-        app: ci-cd-pipline
+        app: spring-devops-app
     spec:
       containers:
-        - name: ci-cd-pipline
-          image: mzishan007/devops-integration:latest  # Will be replaced
+        - name: spring-devops-app
+          image: mzishan007/devops-integration:latest
           ports:
-            - containerPort: 8081
+            - containerPort: 8081  # Update if your app uses a different port
