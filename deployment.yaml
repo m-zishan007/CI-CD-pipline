@@ -13,7 +13,7 @@ spec:
         app: ci-cd-pipline
     spec:
       containers:
-        - name: CI-CD-pipline
+        - name: ci-cd-pipline
           image: mzishan007/devops-integration:latest  # Will be replaced
           ports:
             - containerPort: 8081
