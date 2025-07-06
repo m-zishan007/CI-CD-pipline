@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: CI-CD-pipline
+  name: ci-cd-pipline
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: CI-CD-pipline
+      app: ci-cd-pipline
   template:
     metadata:
       labels:
-        app: CI-CD-pipline
+        app: ci-cd-pipline
     spec:
       containers:
         - name: CI-CD-pipline
