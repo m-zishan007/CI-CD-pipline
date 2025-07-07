@@ -28,8 +28,9 @@ public class DemoController {
         return "How are you doing today pipe!";
     }
 
-    @GetMapping("/hello")
-    public String testexample(){return "Example";    }
-
+    @GetMapping("/testexample")
+    public String testexample() {
+        return "Example";
+    }
 
 }
