@@ -17,3 +17,6 @@ spec:
           image: mzishan007/devops-integration:latest
           ports:
             - containerPort: 8081  # Update if your app uses a different port
+      imagePullSecrets:
+        - name: dockerhub-secret  # Add this section
+
