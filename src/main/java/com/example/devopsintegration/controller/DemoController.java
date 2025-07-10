@@ -30,7 +30,7 @@ public class DemoController {
 
     @GetMapping("/testexample")
     public String testexample() {
-        return "Example";
+        return "test";
     }
 
 }
